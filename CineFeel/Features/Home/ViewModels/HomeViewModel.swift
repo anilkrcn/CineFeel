@@ -10,8 +10,13 @@ final class HomeViewModel: ObservableObject{
     private var totalPages = 1
     
     private var isFetching = false
+    private let repository: MovieRepository
     
-    private let networkManager = NetworkManager()
+    init(repository: MovieRepository = DefaultMovieRepository(
+        networkService: NetworkManager()
+    )) {
+        self.repository = repository
+    }
     
     func fetchTrendingMovies() async {
         
@@ -28,7 +33,7 @@ final class HomeViewModel: ObservableObject{
             isFetching = false
         }
         do {
-            let response = try await networkManager.fetch(endpoint: TrendingMoviesEndpoint(page: currentPage), type: MovieResponse.self)
+            let response = try await repository.fetchTrending(page: currentPage)
             movies += response.results
             currentPage += 1
             totalPages = response.totalPages

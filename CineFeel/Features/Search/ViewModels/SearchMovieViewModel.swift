@@ -7,9 +7,16 @@ final class SearchMovieViewModel: ObservableObject{
     @Published var movies: [Movie] = []
     @Published var state: ViewState = .idle
     
-    private let networkManager = NetworkManager()
-    
+    private let repository: MovieRepository
+    //private let networkService: NetworkService
     private var searchTask: Task<Void, Never>?
+    
+    
+    init(repository: MovieRepository = DefaultMovieRepository(
+        networkService: NetworkManager()
+    )) {
+        self.repository = repository
+    }
     
     func searchMovies() {
         searchTask?.cancel()
@@ -26,7 +33,7 @@ final class SearchMovieViewModel: ObservableObject{
                 state = .loading
                 try await Task.sleep(for: .milliseconds(400))
                 
-                let response = try await networkManager.fetch(endpoint: SearchMovieEndpoint(query: searchText), type: MovieResponse.self)
+                let response = try await repository.search(query: searchText)
                 
                 if Task.isCancelled {return}
                 

@@ -1,6 +1,6 @@
 import Foundation
 
-final class NetworkManager {
+final class NetworkManager: NetworkService {
 
     func fetch<T: Decodable>(
         endpoint: Endpoint,

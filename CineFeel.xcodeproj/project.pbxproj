@@ -6,11 +6,48 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXContainerItemProxy section */
+		D6BF9DAE2FDAFD8700175750 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D6F348CF2FAD144100310F63 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D6F348D62FAD144100310F63;
+			remoteInfo = CineFeel;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		D6BF9DAA2FDAFD8700175750 /* CineFeelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CineFeelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6F348D72FAD144100310F63 /* CineFeel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CineFeel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		D6BF9DB62FDAFF0B00175750 /* Exceptions for "CineFeelTests" folder in "CineFeel" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Mocks/MockMovieRepository.swift,
+			);
+			target = D6F348D62FAD144100310F63 /* CineFeel */;
+		};
+		D6BF9DB72FDAFF0B00175750 /* Exceptions for "CineFeelTests" folder in "CineFeelTests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Mocks/MockMovieRepository.swift,
+			);
+			target = D6BF9DA92FDAFD8700175750 /* CineFeelTests */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		D6BF9DAB2FDAFD8700175750 /* CineFeelTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				D6BF9DB62FDAFF0B00175750 /* Exceptions for "CineFeelTests" folder in "CineFeel" target */,
+				D6BF9DB72FDAFF0B00175750 /* Exceptions for "CineFeelTests" folder in "CineFeelTests" target */,
+			);
+			path = CineFeelTests;
+			sourceTree = "<group>";
+		};
 		D6F348D92FAD144100310F63 /* CineFeel */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = CineFeel;
@@ -19,6 +56,13 @@
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		D6BF9DA72FDAFD8700175750 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D6F348D42FAD144100310F63 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -33,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				D6F348D92FAD144100310F63 /* CineFeel */,
+				D6BF9DAB2FDAFD8700175750 /* CineFeelTests */,
 				D6F348D82FAD144100310F63 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				D6F348D72FAD144100310F63 /* CineFeel.app */,
+				D6BF9DAA2FDAFD8700175750 /* CineFeelTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -48,6 +94,29 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		D6BF9DA92FDAFD8700175750 /* CineFeelTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D6BF9DB22FDAFD8700175750 /* Build configuration list for PBXNativeTarget "CineFeelTests" */;
+			buildPhases = (
+				D6BF9DA62FDAFD8700175750 /* Sources */,
+				D6BF9DA72FDAFD8700175750 /* Frameworks */,
+				D6BF9DA82FDAFD8700175750 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D6BF9DAF2FDAFD8700175750 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				D6BF9DAB2FDAFD8700175750 /* CineFeelTests */,
+			);
+			name = CineFeelTests;
+			packageProductDependencies = (
+			);
+			productName = CineFeelTests;
+			productReference = D6BF9DAA2FDAFD8700175750 /* CineFeelTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		D6F348D62FAD144100310F63 /* CineFeel */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D6F348E22FAD144300310F63 /* Build configuration list for PBXNativeTarget "CineFeel" */;
@@ -80,6 +149,10 @@
 				LastSwiftUpdateCheck = 2600;
 				LastUpgradeCheck = 2600;
 				TargetAttributes = {
+					D6BF9DA92FDAFD8700175750 = {
+						CreatedOnToolsVersion = 26.0;
+						TestTargetID = D6F348D62FAD144100310F63;
+					};
 					D6F348D62FAD144100310F63 = {
 						CreatedOnToolsVersion = 26.0;
 					};
@@ -100,11 +173,19 @@
 			projectRoot = "";
 			targets = (
 				D6F348D62FAD144100310F63 /* CineFeel */,
+				D6BF9DA92FDAFD8700175750 /* CineFeelTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		D6BF9DA82FDAFD8700175750 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D6F348D52FAD144100310F63 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -115,6 +196,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		D6BF9DA62FDAFD8700175750 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D6F348D32FAD144100310F63 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -124,7 +212,55 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		D6BF9DAF2FDAFD8700175750 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D6F348D62FAD144100310F63 /* CineFeel */;
+			targetProxy = D6BF9DAE2FDAFD8700175750 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		D6BF9DB02FDAFD8700175750 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.anilkaracan.CineFeelTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CineFeel.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CineFeel";
+			};
+			name = Debug;
+		};
+		D6BF9DB12FDAFD8700175750 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.anilkaracan.CineFeelTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CineFeel.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CineFeel";
+			};
+			name = Release;
+		};
 		D6F348E02FAD144300310F63 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -309,6 +445,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		D6BF9DB22FDAFD8700175750 /* Build configuration list for PBXNativeTarget "CineFeelTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D6BF9DB02FDAFD8700175750 /* Debug */,
+				D6BF9DB12FDAFD8700175750 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		D6F348D22FAD144100310F63 /* Build configuration list for PBXProject "CineFeel" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

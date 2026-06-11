@@ -1,6 +1,6 @@
 import Foundation
 
-enum AppError: LocalizedError {
+enum AppError: LocalizedError, Equatable {
 
     case invalidURL
     case invalidResponse

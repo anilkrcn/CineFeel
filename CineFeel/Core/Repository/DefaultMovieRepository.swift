@@ -16,5 +16,10 @@ final class DefaultMovieRepository: MovieRepository{
         let endpoint = SearchMovieEndpoint(query: query)
         return try await networkService.fetch(endpoint: endpoint, type: MovieResponse.self)
     }
+    
+    func fetchDetail(id: Int) async throws -> MovieDetail {
+        let endpoint = MovieDetailEndpoint(movieID: id)
+        return try await networkService.fetch(endpoint: endpoint, type: MovieDetail.self)
+    }
 }
 

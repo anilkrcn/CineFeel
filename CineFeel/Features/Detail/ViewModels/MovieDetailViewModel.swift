@@ -6,18 +6,20 @@ final class MovieDetailViewModel: ObservableObject{
     @Published var movie: MovieDetail?
     @Published var state: ViewState = .idle
     
-    private let networkService: NetworkService
+    private let repository: MovieRepository
     let movieID: Int
     
-    init(movieID: Int, networkService: NetworkService = NetworkManager()){
+    init(movieID: Int, repository: MovieRepository = DefaultMovieRepository(
+        networkService: NetworkManager()
+    )){
         self.movieID = movieID
-        self.networkService = networkService
+        self.repository = repository
     }
     
     func fetchMovieDetail() async {
         state = .loading
         do{
-            let response = try await networkService.fetch(endpoint: MovieDetailEndpoint(movieID: movieID), type: MovieDetail.self)
+            let response = try await repository.fetchDetail(id: movieID)
             movie = response
             state = .loaded
         }catch let error as AppError{
